@@ -1,7 +1,12 @@
 function calcFontSize(container, str, min, max) {
   //  проверки
   if (str.length > 100 || !str) {
-    container.innerHTML = "Достигнут лимит символов!";
+    if (!str) {
+      container.innerHTML = "Введите значение";
+    } else {
+      container.innerHTML = "Достигнут лимит символов!";
+    }
+
     return null;
   }
 
